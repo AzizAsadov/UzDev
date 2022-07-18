@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-wx=9_$pgfkwm7)82&gw5^lg+*_l@y8kyr18_iazhj)51vleb2f'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["ozbekdasturchi.uz" "www.ozbekdasturchi.uz"]
 
 
 # Application definition
@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -119,21 +120,16 @@ USE_TZ = True
 
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__)),
 STATIC_URL = '/static/'
-
-if DEBUG:
-        STATICFILES_DIRS = [ BASE_DIR / "static"]
-else:
-    STATIC_ROOT = [
-        os.path.join(BASE_DIR, '../static/'),
-    ]
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_DIRS = '/home/ozbekdas/ozbekdasturchi.uz/django/static_files',
+STATIC_ROOT = '/home/ozbekdas/ozbekdasturchi.uz/django/static'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = '/home/ozbekdas/ozbekdasturchi.uz/django/media'
 
 
 
 # STATICFILES_STORAGE='django.contrib.staticfiles.storage.StaticFilesStorage'
 
-# MEDIA
-MEDIA_URL = '/media/'
-MEDIA_ROOT =  BASE_DIR/'media' 
 
 
 
