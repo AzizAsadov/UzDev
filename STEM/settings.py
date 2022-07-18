@@ -119,7 +119,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 # BASE_DIR = os.path.dirname(os.path.abspath(__file__)),
-STATIC_URL = '/home/ozbekdas/ozbekdasturchi.uz/django/static/'
+STATIC_URL = 'static/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 STATICFILES_DIRS = '/home/ozbekdas/ozbekdasturchi.uz/django/static',
 STATIC_ROOT = '/home/ozbekdas/ozbekdasturchi.uz/django/static'
@@ -128,7 +128,6 @@ MEDIA_ROOT = '/home/ozbekdas/ozbekdasturchi.uz/django/media'
 
 
 
-# STATICFILES_STORAGE='django.contrib.staticfiles.storage.StaticFilesStorage'
 
 
 
