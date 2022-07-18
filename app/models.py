@@ -1,7 +1,6 @@
 from django.db import models
 from django.urls import reverse
 from django.utils import timezone
-from ckeditor.fields import RichTextField 
 
 # Create your models here.
 
